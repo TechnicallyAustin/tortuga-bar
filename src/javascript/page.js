@@ -1,16 +1,20 @@
-// creates the API for the page
+// creates the API for the pag
+import 'bootstrap'
+export function createPage(){
+    const content = document.body.appendChild(document.createElement("div"));
+    content.setAttribute("class", "content w-100 h-25")
 
-export const createPage = () => {
-    const content = document.querySelector("#content")
-    const header = () => {
-        const nav = () => {}
-    }
-    const hero = () => {
-        const headline = () => {}
-    }
+    const header = content.appendChild(document.createElement("header"));
+    header.setAttribute("class", "header w-100 h-25 bg-info")
 
-    const menu = () => {}
-    const footer = () => {}
+    const nav = header.appendChild(document.createElement("nav"));
+    nav.setAttribute("class","nav")
+    const title = nav.appendChild(document.createElement("h1"))
+    title.textContent = "Technically Bar"
 
-}
+    const main = content.appendChild(document.createElement("main"));
+    main.setAttribute("class", "main")
 
+    const footer = content.appendChild(document.createElement("footer"));
+    footer.setAttribute("class", "footer")
+};
