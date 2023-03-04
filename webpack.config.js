@@ -1,5 +1,5 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const path = require('path')
+const path = require("path");
 
 module.exports = {
   entry: "./src/javascript/index.js",
@@ -11,10 +11,12 @@ module.exports = {
   module: {
     rules: [
       {
+        // ES6 Loader
         test: /\.js$/,
         exclude: /node_modules/,
         use: ["babel-loader"],
       },
+      // CSS Loader
       {
         test: /\.css$/,
         use: ["style-loader", "css-loader", "sass-loader"],

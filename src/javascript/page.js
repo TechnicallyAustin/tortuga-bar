@@ -1,5 +1,7 @@
 // creates the API for the pag
-import 'bootstrap'
+import "bootstrap";
+import "jquery";
+import "popper.js";
 export function createPage(){
     const content = document.body.appendChild(document.createElement("div"));
     content.setAttribute("class", "content w-100 h-25")
