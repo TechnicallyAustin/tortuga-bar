@@ -1,4 +1,4 @@
-#content{
+.content{
     display: grid;
     grid-template-rows: 1fr 20fr 1fr;
     height: 100vh;

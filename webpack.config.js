@@ -1,4 +1,4 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+//const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 
 module.exports = {
@@ -48,11 +48,11 @@ module.exports = {
         use: "imports-loader?jQuery=jquery",
       },
     ],
-  },
+  }
 
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "dist", "index.html"),
-    }),
-  ],
+  //plugins: [
+  //  new HtmlWebpackPlugin({
+  //    template: path.resolve(__dirname, "dist", "index.html"),
+  //  }),
+  //],
 };
