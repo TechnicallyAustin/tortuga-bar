@@ -1,6 +1,9 @@
 export const page = {
-  header: function(){
+  content: function(){
     const content = document.querySelector(".content")
+    this.content = content
+  },
+  header: function(){
     const header = content.appendChild(document.createElement("header"));
     header.setAttribute("class", "header bg-warning")
   },
@@ -34,17 +37,20 @@ export const page = {
       }; listItems()
     }; list()
   },
-  hero: function(){
-    
-  },
   main: function(){
     const main = content.appendChild(document.createElement("main"));
     main.setAttribute("class", "main bg-dark")
-
     
-  },
-  section: function(){
-    const mainSelector = document.querySelector(".main");
+    const elements = {
+      hero: function(){
+        const hero = main.appendChild(document.createElement("div"));
+        hero.setAttribute("class", "");
+      },
+      section: function(){
+        const section = main.appendChild(document.createElement("section"));
+        section.setAttribute("class","");
+      }
+    }
 
   },
   footer: function(){
@@ -55,9 +61,7 @@ export const page = {
     this.header()
     this.navbar()
     this.navItems()
-    this.hero()
     this.main()
-    this.section()
     this.footer()
   }
 }
