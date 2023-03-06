@@ -38,12 +38,12 @@ export const page = {
   },
   main: function () {
     const main = content.appendChild(document.createElement("main"));
-    main.setAttribute("class", "main bg-dark");
+    main.setAttribute("class", "main h-100 bg-dark d-flex flex-column justify-content-start align-items-center");
 
     const elements = {
       hero: function () {
         const hero = main.appendChild(document.createElement("div"));
-        hero.setAttribute("class", "hero carousel");
+        hero.setAttribute("class", "hero carousel h-50");
 
         const heroItems = {
           img: function () {
@@ -59,8 +59,8 @@ export const page = {
               "class",
               "text-white bg-dark carousel-caption d-flex justify-content-start align-items-center position-absolute top-0 start-0 h-25 bg-opacity-50 w-100"
             );
-            title.setAttribute("class", "fs-1 fw-bold ms-3");
-            title.textContent = "Tehcnically a Bar";
+            title.setAttribute("class", "fs-1 fw-bold ms-3 text-decoration-underline");
+            title.textContent = "Technically a Bar";
           },
         };
         heroItems.img();
@@ -68,7 +68,13 @@ export const page = {
       },
       section: function () {
         const section = main.appendChild(document.createElement("section"));
-        section.setAttribute("class", "");
+        section.setAttribute("class", "carousel tab default bg-dark w-100 h-100");
+
+        const container = section.appendChild(document.createElement("div"))
+        const title = container.appendChild(document.createElement("h2"));
+        container.setAttribute("class", "carousel-caption w-100  position-relative bg-dark bg-opacity top-0 bottom-25 start-0 d-flex justify-content-center align-items-center")
+        title.setAttribute("class", "fs-2 text-decoration-underline");
+        title.textContent = "Menu"
       },
     };
     elements.hero();
