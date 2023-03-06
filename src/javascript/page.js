@@ -5,7 +5,7 @@ export const page = {
   },
   header: function () {
     const header = content.appendChild(document.createElement("header"));
-    header.setAttribute("class", "header position-sticky top-0 bg-opacity-50");
+    header.setAttribute("class", "header  text-white position-sticky top-0 bg-dark");
   },
   navbar: function () {
     const headerSelector = document.querySelector(".header");
@@ -31,7 +31,7 @@ export const page = {
           let item = list.appendChild(document.createElement("li"));
           let itemLink = item.appendChild(document.createElement("a"));
           item.setAttribute("class", "nav item");
-          itemLink.setAttribute("class", "nav-link");
+          itemLink.setAttribute("class", "nav-link text-white");
           itemLink.textContent = link;
         }
       },
@@ -86,24 +86,24 @@ export const page = {
         const title = container.appendChild(document.createElement("h2"));
         container.setAttribute(
           "class",
-          "carousel-caption w-100 position-relative bg-secondary bg-opacity-50 top-0 bottom-25 start-0 d-flex justify-content-center align-items-center"
+          "w-100 position-relative bg-dark bg-opacity-50 top-0 bottom-25 start-0 d-flex justify-content-center align-items-center"
         );
-        title.setAttribute("class", "fs-2 text-decoration-underline");
+        title.setAttribute("class", "fs-2 mb-0 text-white text-decoration-underline");
         title.textContent = "Menu";
       },
       article: function () {
         const section = document.querySelector(".section");
 
         const tabContainer = section.appendChild(document.createElement("div"));
-        tabContainer.setAttribute("class", "tab-container bg-dark d-flex justify-content-around align-items-center h-75 w-100 me-2");
+        tabContainer.setAttribute("class", "tab-container bg-secondary h-100 w-100 me-2");
 
         function tabs() {
           const titles = ["Food", "Drinks", "Specials"];
           const tabs = tabContainer.appendChild(document.createElement("nav"));
-          tabs.setAttribute("class", "nav flex-column w-25 h-100 bg-secondary");
+          tabs.setAttribute("class", "nav flex-column h-100");
           for (let title of titles) {
             let link = tabs.appendChild(document.createElement("a"));
-            link.setAttribute("class", `nav-link ${title.toLowerCase()} text-white fs-3`);
+            link.setAttribute("class", `nav-link ${title.toLowerCase()} text-white fs-4 bg-secondary`);
             link.setAttribute("href", `#food`);
             link.textContent = title;
           }
@@ -113,7 +113,7 @@ export const page = {
         const article = tabContainer.appendChild(
           document.createElement("article")
         );
-        article.setAttribute("class", " h-100 w-75 bg-dark");
+        article.setAttribute("class", " h-100 w-100 bg-secondary");
       },
     };
     elements.hero();
@@ -122,7 +122,11 @@ export const page = {
   },
   footer: function () {
     const footer = content.appendChild(document.createElement("footer"));
-    footer.setAttribute("class", "footer bg-warning");
+    footer.setAttribute("class", "footer bg-dark w-100  d-flex position-fixed bottom-0 justify-content-center align-items-center");
+
+    const text = footer.appendChild(document.createElement("p"));
+    text.setAttribute("class", " text-white m-0 fs-5")
+    text.textContent = "Footer Text"
   },
   build: function () {
     this.header();

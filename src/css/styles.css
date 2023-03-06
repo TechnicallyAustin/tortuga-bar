@@ -5,10 +5,15 @@
     width: 100vw;
 }
 
+header{
+    z-index: 10;
+}
 .img{
     width: 100%;
     height: auto;
 }
 
-.section{
+.tab-container{
+    display: grid;
+    grid-template-columns: 1fr 10fr;
 }
