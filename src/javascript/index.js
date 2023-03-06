@@ -4,11 +4,16 @@ import "bootstrap";
 import 'jquery';
 import 'popper.js'
 import '../css/styles.css'
-import { newPage } from './page.js'
+import { page } from './page.js'
 
-newPage()
-// create logic for each tab of the bar
+// creates Page Elements
+function buildPage(){
+page.build()
+};
 
+
+
+// creates logic for each tab of the bar
 function menu(){
     // adds an event listenr to the  tab to dynmically create a menu
 }
@@ -20,3 +25,6 @@ function drinks(){
 function about(){
   // adds an event listenr to the  tab to dynmically create a menu
 }
+
+// builds page.
+buildPage();
