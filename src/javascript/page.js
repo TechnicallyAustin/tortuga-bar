@@ -43,18 +43,23 @@ export const page = {
     const elements = {
       hero: function () {
         const hero = main.appendChild(document.createElement("div"));
-        hero.setAttribute("class", "");
+        hero.setAttribute("class", "hero carousel");
 
         const heroItems = {
           img: function () {
             const img = hero.appendChild(document.createElement("img"));
             img.setAttribute("class", "img-fluid");
             img.setAttribute("src", "../src/images/bar-2.jpg");
-            img.setAttribute("alt", "");
+            img.setAttribute("alt", "tech bar io image");
           },
           title: function () {
-            const title = hero.appendChild(document.createElement("h1"));
-            title.setAttribute("class", "");
+            const container = hero.appendChild(document.createElement("div"));
+            const title = container.appendChild(document.createElement("h1"));
+            container.setAttribute(
+              "class",
+              "text-white bg-dark carousel-caption d-flex justify-content-start align-items-center position-absolute top-0 start-0 h-25 bg-opacity-50 w-100"
+            );
+            title.setAttribute("class", "fs-1 fw-bold ms-3");
             title.textContent = "Tehcnically a Bar";
           },
         };
