@@ -4,9 +4,9 @@ import "bootstrap";
 import 'jquery';
 import 'popper.js'
 import '../css/styles.css'
-import { createPage } from './page.js'
+import { newPage } from './page.js'
 
-createPage()
+newPage()
 // create logic for each tab of the bar
 
 function menu(){
