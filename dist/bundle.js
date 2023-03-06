@@ -669,6 +669,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/javascript/food.js":
+/*!********************************!*\
+  !*** ./src/javascript/food.js ***!
+  \********************************/
+/***/ (() => {
+
+eval("class Food {\n  constructor(title, info, price) {\n    this.title = title;\n    this.info = info;\n    this.price = price;\n  }\n}\nconst foodList = {\n  ramen: [\"Ramen\", \"Tonkatsu Ramen with a boiled egg and chasu, served with traditional toppings.\", \"18\"],\n  pizza: [\"Pizza\", \"Your choice of our speciality pizza's. Supreme, Combination or Meat-Lovers.\", \"22\"],\n  burger: [\"Burger\", \"2 1/4 lb All-American Beef Pattiees, Build your own burger.\", \"16\"],\n  fries: [\"Fries\", \"French fries, served regular or cajun.\", \"8\"],\n  sushi: [\"Sushi\", \"Your choice of 6 differnt sushi rolls.\", \"7\"],\n  salad: [\"Salad\", \"Cesear Salad with your choice of meat, made to perfection.\", \"12\"]\n};\nfunction displayMenu() {\n  const article = document.querySelector(\"article\");\n  const foodItems = {\n    dom: function () {\n      for (let i = 0; i < foodList.length; i++) {\n        let mealItem = foodList[i];\n        let meal = article.appendChild(document.createElement(\"div\"));\n        for (let i = 0; i < mealItem[i].length; i++) {\n          let attribute = meal[i];\n        }\n      }\n    },\n    newObj: function () {\n      for (let i = 0; i < foodList.length; i++) {\n        let meal = foodList[i];\n      }\n    }\n  };\n}\nfunction foodEvent() {\n  const food = document.querySelector(\".food\");\n  food.addEventListener(\"click\", displayMenu());\n}\nconsole.log(\"Food imported\");\n\n//# sourceURL=webpack:///./src/javascript/food.js?");
+
+/***/ }),
+
 /***/ "./src/javascript/index.js":
 /*!*********************************!*\
   !*** ./src/javascript/index.js ***!
@@ -676,7 +686,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap */ \"./node_modules/bootstrap/dist/js/bootstrap.esm.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _css_styles_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../css/styles.css */ \"./src/css/styles.css\");\n/* harmony import */ var _page_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./page.js */ \"./src/javascript/page.js\");\n// includes the logic from each aspect of the page\n\n\n\n\n\n\n\n// creates Page Elements\nfunction buildPage() {\n  _page_js__WEBPACK_IMPORTED_MODULE_3__.page.build();\n}\n;\n\n// creates logic for each tab of the bar\nfunction menu() {\n  // adds an event listenr to the  tab to dynmically create a menu\n}\nfunction drinks() {\n  // adds an event listenr to the  tab to dynmically create a menu\n}\nfunction about() {\n  // adds an event listenr to the  tab to dynmically create a menu\n}\n\n// builds page.\nbuildPage();\n\n//# sourceURL=webpack:///./src/javascript/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap */ \"./node_modules/bootstrap/dist/js/bootstrap.esm.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _css_styles_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../css/styles.css */ \"./src/css/styles.css\");\n/* harmony import */ var _page_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./page.js */ \"./src/javascript/page.js\");\n/* harmony import */ var _food_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./food.js */ \"./src/javascript/food.js\");\n/* harmony import */ var _food_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_food_js__WEBPACK_IMPORTED_MODULE_4__);\n// includes the logic from each aspect of the page\n\n\n\n\n\n\n\n\n// creates Page Elements\nfunction buildPage() {\n  _page_js__WEBPACK_IMPORTED_MODULE_3__.page.build();\n}\n;\n\n// creates logic for each tab of the bar\nfunction menu() {\n  // adds an event listenr to the  tab to dynmically create a menu\n}\nfunction drinks() {\n  // adds an event listenr to the  tab to dynmically create a menu\n}\nfunction about() {\n  // adds an event listenr to the  tab to dynmically create a menu\n}\n\n// builds page.\nbuildPage();\n\n//# sourceURL=webpack:///./src/javascript/index.js?");
 
 /***/ }),
 

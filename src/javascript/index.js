@@ -5,6 +5,7 @@ import 'jquery';
 import 'popper.js'
 import '../css/styles.css'
 import { page } from './page.js'
+import './food.js'
 
 // creates Page Elements
 function buildPage(){
