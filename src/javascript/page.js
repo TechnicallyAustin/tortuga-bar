@@ -10,7 +10,10 @@ export const page = {
   navbar: function () {
     const headerSelector = document.querySelector(".header");
     const nav = headerSelector.appendChild(document.createElement("navbar"));
-    nav.setAttribute("class", "navbar d-flex justify-content-between align-items-center");
+    nav.setAttribute(
+      "class",
+      "navbar d-flex justify-content-between align-items-center"
+    );
 
     const items = {
       title: function () {
@@ -26,9 +29,9 @@ export const page = {
         const links = ["About", "Menu", "Drinks"];
         for (let link of links) {
           let item = list.appendChild(document.createElement("li"));
-          let itemLink = item.appendChild(document.createElement("a"))
+          let itemLink = item.appendChild(document.createElement("a"));
           item.setAttribute("class", "nav item");
-          itemLink.setAttribute("class", "nav-link")
+          itemLink.setAttribute("class", "nav-link");
           itemLink.textContent = link;
         }
       },
@@ -38,7 +41,10 @@ export const page = {
   },
   main: function () {
     const main = content.appendChild(document.createElement("main"));
-    main.setAttribute("class", "main h-100 bg-dark d-flex flex-column justify-content-start align-items-center");
+    main.setAttribute(
+      "class",
+      "main h-100 bg-secondary d-flex flex-column justify-content-start align-items-center"
+    );
 
     const elements = {
       hero: function () {
@@ -49,7 +55,7 @@ export const page = {
           img: function () {
             const img = hero.appendChild(document.createElement("img"));
             img.setAttribute("class", "img-fluid");
-            img.setAttribute("src", "../src/images/bar-2.jpg");
+            img.setAttribute("src", "../src/images/bar.jpg");
             img.setAttribute("alt", "tech bar io image");
           },
           title: function () {
@@ -59,7 +65,10 @@ export const page = {
               "class",
               "text-white bg-dark carousel-caption d-flex justify-content-start align-items-center position-absolute top-0 start-0 h-25 bg-opacity-50 w-100"
             );
-            title.setAttribute("class", "fs-1 fw-bold ms-3 text-decoration-underline");
+            title.setAttribute(
+              "class",
+              "fs-1 fw-bold ms-3 text-decoration-underline"
+            );
             title.textContent = "Technically a Bar";
           },
         };
@@ -68,17 +77,48 @@ export const page = {
       },
       section: function () {
         const section = main.appendChild(document.createElement("section"));
-        section.setAttribute("class", "carousel tab default bg-dark w-100 h-100");
+        section.setAttribute(
+          "class",
+          "section carousel tab default bg-dark w-100 h-100"
+        );
 
-        const container = section.appendChild(document.createElement("div"))
+        const container = section.appendChild(document.createElement("div"));
         const title = container.appendChild(document.createElement("h2"));
-        container.setAttribute("class", "carousel-caption w-100  position-relative bg-dark bg-opacity top-0 bottom-25 start-0 d-flex justify-content-center align-items-center")
+        container.setAttribute(
+          "class",
+          "carousel-caption w-100 position-relative bg-secondary bg-opacity-50 top-0 bottom-25 start-0 d-flex justify-content-center align-items-center"
+        );
         title.setAttribute("class", "fs-2 text-decoration-underline");
-        title.textContent = "Menu"
+        title.textContent = "Menu";
+      },
+      article: function () {
+        const section = document.querySelector(".section");
+
+        const tabContainer = section.appendChild(document.createElement("div"));
+        tabContainer.setAttribute("class", "tab-container bg-dark d-flex justify-content-around align-items-center h-75 w-100 me-2");
+
+        function tabs() {
+          const titles = ["Food", "Drinks", "Specials"];
+          const tabs = tabContainer.appendChild(document.createElement("nav"));
+          tabs.setAttribute("class", "nav flex-column w-25 h-100 bg-secondary");
+          for (let title of titles) {
+            let link = tabs.appendChild(document.createElement("a"));
+            link.setAttribute("class", `nav-link ${title.toLowerCase()} text-white fs-3`);
+            link.setAttribute("href", `#food`);
+            link.textContent = title;
+          }
+        }
+        tabs();
+
+        const article = tabContainer.appendChild(
+          document.createElement("article")
+        );
+        article.setAttribute("class", " h-100 w-75 bg-dark");
       },
     };
     elements.hero();
     elements.section();
+    elements.article();
   },
   footer: function () {
     const footer = content.appendChild(document.createElement("footer"));
