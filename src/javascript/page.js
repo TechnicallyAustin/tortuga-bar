@@ -5,14 +5,14 @@ export const page = {
   },
   header: function () {
     const header = content.appendChild(document.createElement("header"));
-    header.setAttribute("class", "header  text-white position-sticky top-0 bg-dark");
+    header.setAttribute("class", "header  text-white bg-dark");
   },
   navbar: function () {
     const headerSelector = document.querySelector(".header");
     const nav = headerSelector.appendChild(document.createElement("navbar"));
     nav.setAttribute(
       "class",
-      "navbar d-flex justify-content-between align-items-center"
+      "navbar d-flex justify-content-between align-items-center fixed-top"
     );
 
     const items = {

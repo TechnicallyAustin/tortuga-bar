@@ -5,7 +5,8 @@ import 'jquery';
 import 'popper.js'
 import '../css/styles.css'
 import { page } from './page.js'
-import './food.js'
+import {addFood} from './food.js'
+//import './food.js'
 
 // creates Page Elements
 function buildPage(){
@@ -15,7 +16,8 @@ page.build()
 
 
 // creates logic for each tab of the bar
-function menu(){
+function food(){
+  addFood()
     // adds an event listenr to the  tab to dynmically create a menu
 }
 
@@ -29,3 +31,4 @@ function about(){
 
 // builds page.
 buildPage();
+food()

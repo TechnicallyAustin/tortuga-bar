@@ -1,3 +1,5 @@
+import {createCards} from './card.js'
+
 class Food {
   constructor(title, info, price) {
     this.title = title;
@@ -39,32 +41,19 @@ const foodList = {
     ]
 };
 
-function displayMenu() {
-  const article = document.querySelector("article");
-
-  const foodItems = {
-    dom: function(){
-        for (let i = 0; i < foodList.length; i++) {
-          let mealItem = foodList[i]
-          let meal = article.appendChild(document.createElement("div"));
-          
-            for (let i = 0; i < mealItem[i].length; i++) {
-                let attribute = meal[i]
-          }
-        }
-    },
-    newObj: function(){
-        for (let i = 0; i < foodList.length; i++) {
-          let meal = foodList[i];
-          
-        }
+export function addFood() {
+    for (let key in foodList){
+        let title = foodList[key][0];
+        let info = foodList[key][1];
+        let price = foodList[key][2];
+        const meal = new Food(title,info,price)
+        console.log(meal)
     }
-}
-}
+};
 
 function foodEvent() {
   const food = document.querySelector(".food");
-  food.addEventListener("click", displayMenu());
+  food.addEventListener("click", ()=> {display()});
 }
 
 console.log("Food imported")
