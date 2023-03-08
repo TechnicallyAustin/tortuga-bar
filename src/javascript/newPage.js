@@ -1,4 +1,4 @@
-function newPage(){
+export function newPage(){
     const content = document.querySelector(".content");
 
     function header(){
@@ -58,7 +58,8 @@ function newPage(){
             text: function(){},
             credit: function(){}
         }
-        footer.info()
+        info.text()
+        info.credit()
     }
 
     function build(){
@@ -66,4 +67,5 @@ function newPage(){
         main()
         footer()
     };
+    build()
 };

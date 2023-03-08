@@ -4,13 +4,13 @@ import "bootstrap";
 import 'jquery';
 import 'popper.js'
 import '../css/styles.css'
-import { page } from './page.js'
+import { newPage } from './newPage.js'
 import {addFood} from './food.js'
 //import './food.js'
 
 // creates Page Elements
 function buildPage(){
-page.build()
+newPage()
 };
 
 
