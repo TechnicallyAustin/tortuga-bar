@@ -1,15 +1,29 @@
+* {
+    margin: 0;
+    top: 0;
+    left: 0;
+}
+
 .content {
     display: grid;
-    grid-template-rows: 1fr 20fr 1fr;
-    height: 100vh;
+    grid-template-rows: 1fr 6fr 14fr 1fr;
+    height: 95vh;
     width: 100%;
 }
 
-.hero{
-    height: 40vw;
-    width: 100%;
+.header {
+    height: 5vh;
 }
-.hero-image{
+
+.hero {
+    height: 45vw;
     width: 100%;
-    height: fit-content;
+    background-image: url("../images/glass.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.tab-nav{
+    height: 5vh;
 }

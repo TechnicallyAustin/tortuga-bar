@@ -708,7 +708,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var boot
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"newPage\": () => (/* binding */ newPage)\n/* harmony export */ });\nfunction newPage() {\n  const content = document.querySelector(\".content\");\n  function header() {\n    const header = content.appendChild(document.createElement(\"header\"));\n    const navbar = {\n      nav: null,\n      create: function () {\n        const nav = header.appendChild(document.createElement(\"nav\"));\n        nav.setAttribute(\"class\", \"d-flex justify-content-between align-items-center\");\n        this.nav = nav;\n        return this.nav;\n      },\n      title: function () {\n        const title = this.nav.appendChild(document.createElement(\"p\"));\n        title.setAttribute(\"class\", \"text-white mb-0\");\n        title.textContent = \"TECH BAR IO\";\n      },\n      links: function () {\n        const list = this.nav.appendChild(document.createElement(\"ul\"));\n        list.setAttribute(\"class\", \"d-flex justify-content-around w-50\");\n        const links = [\"Food\", \"Drinks\", \"Specials\"];\n        for (let link of links) {\n          let item = list.appendChild(document.createElement(\"li\"));\n          let itemLink = item.appendChild(document.createElement(\"a\"));\n          item.setAttribute(\"class\", \"\");\n          itemLink.setAttribute(\"class\", \"\");\n          itemLink.textContent = link;\n        }\n      }\n    };\n    navbar.create();\n    navbar.title();\n    navbar.links();\n  }\n  ;\n  function main() {\n    const mainSelector = content.appendChild(document.createElement(\"main\"));\n    const hero = {\n      hero: null,\n      create: function () {\n        const create = mainSelector.appendChild(document.createElement(\"div\"));\n        create.setAttribute(\"class\", \"hero\");\n        this.hero = create;\n        return this.hero;\n      },\n      image: function () {\n        const image = this.hero.appendChild(document.createElement(\"img\"));\n        image.setAttribute(\"class\", \"hero-image\");\n        image.setAttribute(\"src\", \"../src/images/glass.jpeg\");\n        image.setAttribute(\"alt\", \"\");\n      },\n      headline: function () {\n        const headline = this.hero.appendChild(document.createElement(\"h1\"));\n        headline.setAttribute(\"class\", \"\");\n        headline.textContent = \"The search for home ends here, welcome to Tech Bar IO\";\n      }\n    };\n    hero.create();\n    hero.image();\n    hero.headline();\n    const main = {\n      section: function () {},\n      navbar: function () {},\n      article: function () {}\n    };\n    main.section();\n    main.navbar();\n    main.article();\n  }\n  ;\n  function footer() {\n    const info = {\n      text: function () {},\n      credit: function () {}\n    };\n    info.text();\n    info.credit();\n  }\n  function build() {\n    header();\n    main();\n    footer();\n  }\n  ;\n  build();\n}\n;\n\n//# sourceURL=webpack:///./src/javascript/newPage.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"newPage\": () => (/* binding */ newPage)\n/* harmony export */ });\nfunction newPage() {\n  const content = document.querySelector(\".content\");\n  function header() {\n    const header = content.appendChild(document.createElement(\"header\"));\n    header.setAttribute(\"class\", \"bg-black bg-opacity-50 w-100 d-flex justify-content-between align-items-center\");\n    const title = () => {\n      const title = header.appendChild(document.createElement(\"p\"));\n      title.setAttribute(\"class\", \"w-25 ms-3 text-white mb-0 fs-3 \");\n      title.textContent = \"TECH BAR IO\";\n    };\n    const navbar = {\n      nav: null,\n      create: function () {\n        const nav = header.appendChild(document.createElement(\"navbar\"));\n        nav.setAttribute(\"class\", \"w-50 d-flex justify-content-around align-items-center\");\n        this.nav = nav;\n        return this.nav;\n      },\n      links: function () {\n        const list = this.nav.appendChild(document.createElement(\"ul\"));\n        list.setAttribute(\"class\", \"w-100 d-flex justify-content-around align-items-center mb-0 ms-3 w-50 fs-4 \");\n        const links = [\"Food\", \"Drinks\", \"Specials\"];\n        for (let link of links) {\n          let item = list.appendChild(document.createElement(\"li\"));\n          let itemLink = item.appendChild(document.createElement(\"a\"));\n          item.setAttribute(\"class\", \"\");\n          itemLink.setAttribute(\"class\", \"text-white\");\n          itemLink.textContent = link;\n        }\n      }\n    };\n    title();\n    navbar.create();\n    navbar.links();\n  }\n  function hero() {\n    const hero = {\n      hero: null,\n      create: function () {\n        const create = content.appendChild(document.createElement(\"div\"));\n        create.setAttribute(\"class\", \"hero\");\n        this.hero = create;\n        return this.hero;\n      },\n      headline: function () {\n        const container = this.hero.appendChild(document.createElement(\"div\"));\n        container.setAttribute(\"class\", \"headline-container position-relative top-0 ms-3 w-50 bg-black bg-opacity-50\");\n        const headline = container.appendChild(document.createElement(\"h1\"));\n        headline.setAttribute(\"class\", \"text-white pt-4\");\n        headline.textContent = \"The search for home ends here.\";\n      }\n    };\n    hero.create();\n    hero.headline();\n  }\n  function main() {\n    const mainSelector = content.appendChild(document.createElement(\"main\"));\n    mainSelector.setAttribute(\"class\", \"main\");\n    const main = {\n      tabs: function () {\n        const menuTabs = mainSelector.appendChild(document.createElement(\"div\"));\n        menuTabs.setAttribute(\"class\", \"tab-nav w-100 bg-black bg-opacity-50\");\n        const title = [\"Food\", \"Drinks\", \"Specials\"];\n      },\n      section: function () {\n        const section = mainSelector.appendChild(document.createElement(\"section\"));\n        section.setAttribute(\"class\", \"section\");\n      },\n      navbar: function () {},\n      article: function () {}\n    };\n    main.tabs();\n    main.section();\n    main.navbar();\n    main.article();\n  }\n  function footer() {\n    const info = {\n      text: function () {},\n      credit: function () {}\n    };\n    info.text();\n    info.credit();\n  }\n  function build() {\n    header();\n    hero();\n    main();\n    footer();\n  }\n  build();\n}\n\n//# sourceURL=webpack:///./src/javascript/newPage.js?");
 
 /***/ }),
 
@@ -730,7 +730,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \".content {\\n  display: grid;\\n  grid-template-rows: 1fr 20fr 1fr;\\n  height: 100vh;\\n  width: 100%;\\n}\\n\\n.hero {\\n  height: 40vw;\\n  width: 100%;\\n}\\n\\n.hero-image {\\n  width: 100%;\\n  height: fit-content;\\n}\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack:///./src/css/styles.css?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/getUrl.js */ \"./node_modules/css-loader/dist/runtime/getUrl.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);\n// Imports\n\n\n\nvar ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../images/glass.jpeg */ \"./src/images/glass.jpeg\"), __webpack_require__.b);\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\nvar ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"* {\\n  margin: 0;\\n  top: 0;\\n  left: 0;\\n}\\n\\n.content {\\n  display: grid;\\n  grid-template-rows: 1fr 6fr 14fr 1fr;\\n  height: 95vh;\\n  width: 100%;\\n}\\n\\n.header {\\n  height: 5vh;\\n}\\n\\n.hero {\\n  height: 45vw;\\n  width: 100%;\\n  background-image: url(\" + ___CSS_LOADER_URL_REPLACEMENT_0___ + \");\\n  background-size: cover;\\n  background-repeat: no-repeat;\\n  background-position: center;\\n}\\n\\n.tab-nav {\\n  height: 5vh;\\n}\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack:///./src/css/styles.css?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -742,6 +742,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 "use strict";
 eval("\n\n/*\n  MIT License http://www.opensource.org/licenses/mit-license.php\n  Author Tobias Koppers @sokra\n*/\nmodule.exports = function (cssWithMappingToString) {\n  var list = [];\n\n  // return the list of modules as css string\n  list.toString = function toString() {\n    return this.map(function (item) {\n      var content = \"\";\n      var needLayer = typeof item[5] !== \"undefined\";\n      if (item[4]) {\n        content += \"@supports (\".concat(item[4], \") {\");\n      }\n      if (item[2]) {\n        content += \"@media \".concat(item[2], \" {\");\n      }\n      if (needLayer) {\n        content += \"@layer\".concat(item[5].length > 0 ? \" \".concat(item[5]) : \"\", \" {\");\n      }\n      content += cssWithMappingToString(item);\n      if (needLayer) {\n        content += \"}\";\n      }\n      if (item[2]) {\n        content += \"}\";\n      }\n      if (item[4]) {\n        content += \"}\";\n      }\n      return content;\n    }).join(\"\");\n  };\n\n  // import a list of modules into the list\n  list.i = function i(modules, media, dedupe, supports, layer) {\n    if (typeof modules === \"string\") {\n      modules = [[null, modules, undefined]];\n    }\n    var alreadyImportedModules = {};\n    if (dedupe) {\n      for (var k = 0; k < this.length; k++) {\n        var id = this[k][0];\n        if (id != null) {\n          alreadyImportedModules[id] = true;\n        }\n      }\n    }\n    for (var _k = 0; _k < modules.length; _k++) {\n      var item = [].concat(modules[_k]);\n      if (dedupe && alreadyImportedModules[item[0]]) {\n        continue;\n      }\n      if (typeof layer !== \"undefined\") {\n        if (typeof item[5] === \"undefined\") {\n          item[5] = layer;\n        } else {\n          item[1] = \"@layer\".concat(item[5].length > 0 ? \" \".concat(item[5]) : \"\", \" {\").concat(item[1], \"}\");\n          item[5] = layer;\n        }\n      }\n      if (media) {\n        if (!item[2]) {\n          item[2] = media;\n        } else {\n          item[1] = \"@media \".concat(item[2], \" {\").concat(item[1], \"}\");\n          item[2] = media;\n        }\n      }\n      if (supports) {\n        if (!item[4]) {\n          item[4] = \"\".concat(supports);\n        } else {\n          item[1] = \"@supports (\".concat(item[4], \") {\").concat(item[1], \"}\");\n          item[4] = supports;\n        }\n      }\n      list.push(item);\n    }\n  };\n  return list;\n};\n\n//# sourceURL=webpack:///./node_modules/css-loader/dist/runtime/api.js?");
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/getUrl.js":
+/*!********************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/getUrl.js ***!
+  \********************************************************/
+/***/ ((module) => {
+
+"use strict";
+eval("\n\nmodule.exports = function (url, options) {\n  if (!options) {\n    options = {};\n  }\n  if (!url) {\n    return url;\n  }\n  url = String(url.__esModule ? url.default : url);\n\n  // If url is already wrapped in quotes, remove them\n  if (/^['\"].*['\"]$/.test(url)) {\n    url = url.slice(1, -1);\n  }\n  if (options.hash) {\n    url += options.hash;\n  }\n\n  // Should url be wrapped?\n  // See https://drafts.csswg.org/css-values-3/#urls\n  if (/[\"'() \\t\\n]|(%20)/.test(url) || options.needQuotes) {\n    return \"\\\"\".concat(url.replace(/\"/g, '\\\\\"').replace(/\\n/g, \"\\\\n\"), \"\\\"\");\n  }\n  return url;\n};\n\n//# sourceURL=webpack:///./node_modules/css-loader/dist/runtime/getUrl.js?");
 
 /***/ }),
 
@@ -841,6 +852,17 @@ eval("\n\n/* istanbul ignore next  */\nfunction apply(styleElement, options, obj
 "use strict";
 eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElement) {\n  if (styleElement.styleSheet) {\n    styleElement.styleSheet.cssText = css;\n  } else {\n    while (styleElement.firstChild) {\n      styleElement.removeChild(styleElement.firstChild);\n    }\n\n    styleElement.appendChild(document.createTextNode(css));\n  }\n}\n\nmodule.exports = styleTagTransform;\n\n//# sourceURL=webpack:///./node_modules/style-loader/dist/runtime/styleTagTransform.js?");
 
+/***/ }),
+
+/***/ "./src/images/glass.jpeg":
+/*!*******************************!*\
+  !*** ./src/images/glass.jpeg ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"5324393dd8132684be1a.jpeg\";\n\n//# sourceURL=webpack:///./src/images/glass.jpeg?");
+
 /***/ })
 
 /******/ 	});
@@ -869,6 +891,9 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	(() => {
@@ -894,6 +919,18 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -908,6 +945,52 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		__webpack_require__.b = document.baseURI || self.location.href;
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"main": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		// no on chunks loaded
+/******/ 		
+/******/ 		// no jsonp function
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */

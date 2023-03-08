@@ -11,9 +11,7 @@ export const page = {
     const headerSelector = document.querySelector(".header");
     const nav = headerSelector.appendChild(document.createElement("navbar"));
     nav.setAttribute(
-      "class",
-      "navbar d-flex justify-content-between align-items-center fixed-top"
-    );
+      "class","navbar d-flex justify-content-between align-items-center fixed-top");
 
     const items = {
       title: function () {
@@ -24,7 +22,7 @@ export const page = {
       },
       list: function () {
         const list = nav.appendChild(document.createElement("ul"));
-        list.setAttribute("class", "nav");
+        list.setAttribute("class", "nav ms-0 mb-0 me-0 ");
 
         const links = ["About", "Menu", "Drinks"];
         for (let link of links) {
