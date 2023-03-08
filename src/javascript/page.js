@@ -5,7 +5,7 @@ export const page = {
   },
   header: function () {
     const header = content.appendChild(document.createElement("header"));
-    header.setAttribute("class", "header  text-white bg-dark");
+    header.setAttribute("class", "header");
   },
   navbar: function () {
     const headerSelector = document.querySelector(".header");
@@ -43,7 +43,7 @@ export const page = {
     const main = content.appendChild(document.createElement("main"));
     main.setAttribute(
       "class",
-      "main h-100 bg-secondary d-flex flex-column justify-content-start align-items-center"
+      ""
     );
 
     const elements = {
@@ -54,7 +54,7 @@ export const page = {
         const heroItems = {
           img: function () {
             const img = hero.appendChild(document.createElement("img"));
-            img.setAttribute("class", "img-fluid");
+            img.setAttribute("class", "");
             img.setAttribute("src", "../src/images/bar.jpg");
             img.setAttribute("alt", "tech bar io image");
           },
@@ -63,11 +63,11 @@ export const page = {
             const title = container.appendChild(document.createElement("h1"));
             container.setAttribute(
               "class",
-              "text-white bg-dark carousel-caption d-flex justify-content-start align-items-center position-absolute top-0 start-0 h-25 bg-opacity-50 w-100"
+              ""
             );
             title.setAttribute(
               "class",
-              "fs-1 fw-bold ms-3 text-decoration-underline"
+              ""
             );
             title.textContent = "Technically a Bar";
           },
@@ -79,28 +79,28 @@ export const page = {
         const section = main.appendChild(document.createElement("section"));
         section.setAttribute(
           "class",
-          "section carousel tab default bg-dark w-100 vh-100"
+          ""
         );
 
         const container = section.appendChild(document.createElement("div"));
         const title = container.appendChild(document.createElement("h2"));
         container.setAttribute(
           "class",
-          "w-100 position-relative bg-dark bg-opacity-50 top-0 bottom-25 start-0 d-flex justify-content-center align-items-center"
+          ""
         );
-        title.setAttribute("class", "fs-2 mb-0 text-white text-decoration-underline");
+        title.setAttribute("class", "");
         title.textContent = "Menu";
       },
       article: function () {
         const section = document.querySelector(".section");
 
         const tabContainer = section.appendChild(document.createElement("div"));
-        tabContainer.setAttribute("class", "tab-container bg-secondary h-100 w-100 me-2");
+        tabContainer.setAttribute("class", "tab-container");
 
         function tabs() {
           const titles = ["Food", "Drinks", "Specials"];
           const tabs = tabContainer.appendChild(document.createElement("nav"));
-          tabs.setAttribute("class", "nav flex-column h-100");
+          tabs.setAttribute("class", "nav flex-column ");
           for (let title of titles) {
             let link = tabs.appendChild(document.createElement("a"));
             link.setAttribute("class", `nav-link ${title.toLowerCase()} text-white fs-4 bg-secondary`);
