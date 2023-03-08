@@ -1,20 +1,24 @@
-
-.content{
+.content {
     display: grid;
     grid-template-rows: 1fr 20fr 1fr;
-    height: 100vh;
-    width: 100vw;
 }
 
-header{
+header {
     z-index: 10;
 }
-.img{
+
+.hero {
+    height: auto;
+    width: 100%
+}
+
+.img {
     width: 100%;
     height: auto;
 }
 
-.tab-container{
+.tab-container {
+    height: 100vh;
     display: grid;
     grid-template-columns: 1fr 10fr;
 }

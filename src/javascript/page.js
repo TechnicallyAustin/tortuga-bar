@@ -49,7 +49,7 @@ export const page = {
     const elements = {
       hero: function () {
         const hero = main.appendChild(document.createElement("div"));
-        hero.setAttribute("class", "hero carousel h-50");
+        hero.setAttribute("class", "hero carousel");
 
         const heroItems = {
           img: function () {
@@ -79,7 +79,7 @@ export const page = {
         const section = main.appendChild(document.createElement("section"));
         section.setAttribute(
           "class",
-          "section carousel tab default bg-dark w-100 h-100"
+          "section carousel tab default bg-dark w-100 vh-100"
         );
 
         const container = section.appendChild(document.createElement("div"));
