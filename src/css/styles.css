@@ -1,7 +1,5 @@
 * {
     margin: 0;
-    top: 0;
-    left: 0;
 }
 
 .content {
@@ -16,7 +14,7 @@
 }
 
 .hero {
-    height: 45vw;
+    height: 50vw;
     width: 100%;
     background-image: url("../images/glass.jpeg");
     background-size: cover;
@@ -24,6 +22,11 @@
     background-position: center;
 }
 
-.tab-nav{
+.menu-nav{
     height: 5vh;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 3fr 18fr;
 }

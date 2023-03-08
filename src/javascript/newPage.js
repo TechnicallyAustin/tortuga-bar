@@ -5,7 +5,7 @@ export function newPage() {
     const header = content.appendChild(document.createElement("header"));
     header.setAttribute(
       "class",
-      "bg-black bg-opacity-50 w-100 d-flex justify-content-between align-items-center"
+      "bg-black bg-opacity-50 w-100 d-flex justify-content-between align-items-center position-sticky top-0"
     );
 
     const title = () => {
@@ -29,15 +29,15 @@ export function newPage() {
         const list = this.nav.appendChild(document.createElement("ul"));
         list.setAttribute(
           "class",
-          "w-100 d-flex justify-content-around align-items-center mb-0 ms-3 w-50 fs-4 "
+          "w-100 d-flex justify-content-around align-items-center mb-0 ms-3 w-50  list-unstyled"
         );
         const links = ["Food", "Drinks", "Specials"];
 
         for (let link of links) {
           let item = list.appendChild(document.createElement("li"));
           let itemLink = item.appendChild(document.createElement("a"));
-          item.setAttribute("class", "");
-          itemLink.setAttribute("class", "text-white");
+          item.setAttribute("class", "nav-item");
+          itemLink.setAttribute("class", "nav-link text-white");
           itemLink.textContent = link;
         }
       },
@@ -75,20 +75,31 @@ export function newPage() {
     const main = {
         tabs: function(){
             const menuTabs = mainSelector.appendChild(document.createElement("div"));
-            menuTabs.setAttribute("class", "tab-nav w-100 bg-black bg-opacity-50");
-            const title = ["Food", "Drinks", "Specials"]
+            menuTabs.setAttribute("class", "menu-nav flex-column justify-content-around align-items-center h-100 bg-black bg-opacity-50");
+            const titles = ["Food", "Drinks", "Specials"]
+
+            for (let title of titles){
+                let container = menuTabs.appendChild(document.createElement("div"));
+                container.setAttribute("class", `${title.toLowerCase()} menu-tab d-flex align-items-center`)
+                let item = container.appendChild(document.createElement("p"));
+                item.setAttribute("class", "text-white nav-link mb-0 fs-5")
+                item.textContent = title
+            }
         },
-        section: function () {
+        section: null,
+        createSection: function(){
             const section = mainSelector.appendChild(document.createElement("section"))
-            section.setAttribute("class", "section")
+            section.setAttribute("class", "section d-flex justify-content-center w-100 h-100 bg-light")
+            this.section = section
         },
-        navbar: function () {},
-        article: function () {},
+        article: function () {
+            const article = this.section.appendChild(document.createElement("article"));
+            article.setAttribute("class", "article bg-dark w-75 h-100 overflow-y-scroll")
+        },
     };
 
     main.tabs()
-    main.section();
-    main.navbar();
+    main.createSection();
     main.article();
   }
 
