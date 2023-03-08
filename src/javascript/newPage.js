@@ -4,21 +4,23 @@ export function newPage(){
     function header(){
         const header = content.appendChild(document.createElement("header"));
 
+
         const navbar = {
             nav: null,
             create: function(){
-                const nav = content.appendChild(document.createElement("nav"));
-                nav.setAttribute("class", "");
+                const nav = header.appendChild(document.createElement("nav"));
+                nav.setAttribute("class", "d-flex justify-content-between align-items-center");
                 this.nav = nav;
                 return this.nav;
             },
             title: function(){
                 const title = this.nav.appendChild(document.createElement("p"));
-                title.setAttribute("class", "");
+                title.setAttribute("class", "text-white mb-0");
+                title.textContent = "TECH BAR IO"
             },
             links: function(){
                 const list = this.nav.appendChild(document.createElement("ul"));
-                list.setAttribute("class", "");
+                list.setAttribute("class", "d-flex justify-content-around w-50");
                 const links = ["Food", "Drinks", "Specials"];
 
                 for (let link of links) {
@@ -36,10 +38,29 @@ export function newPage(){
     };
 
     function main(){
+        const mainSelector = content.appendChild(document.createElement("main"));
+
         const hero = {
-            image: function(){},
-            headline: function(){}
+            hero: null,
+            create: function(){
+                const create = mainSelector.appendChild(document.createElement("div"))
+                create.setAttribute("class", "hero");
+                this.hero = create
+                return this.hero
+            },
+            image: function(){
+                const image = this.hero.appendChild(document.createElement("img"));
+                image.setAttribute("class", "hero-image")
+                image.setAttribute("src", "../src/images/glass.jpeg")
+                image.setAttribute("alt", "")
+            },
+            headline: function(){
+                const headline = this.hero.appendChild(document.createElement("h1"));
+                headline.setAttribute("class", "");
+                headline.textContent = "The search for home ends here, welcome to Tech Bar IO"
+            }
         };
+        hero.create()
         hero.image()
         hero.headline()
 

@@ -1,24 +1,15 @@
 .content {
     display: grid;
     grid-template-rows: 1fr 20fr 1fr;
-}
-
-header {
-    z-index: 10;
-}
-
-.hero {
-    height: auto;
-    width: 100%
-}
-
-.img {
-    width: 100%;
-    height: auto;
-}
-
-.tab-container {
     height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 10fr;
+    width: 100%;
+}
+
+.hero{
+    height: 40vw;
+    width: 100%;
+}
+.hero-image{
+    width: 100%;
+    height: fit-content;
 }
