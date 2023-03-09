@@ -47,8 +47,12 @@ module.exports = {
         test: /bootstrap\/dist\/js\/umd\//,
         use: "imports-loader?jQuery=jquery",
       },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
+      },
     ],
-  }
+  },
 
   //plugins: [
   //  new HtmlWebpackPlugin({
