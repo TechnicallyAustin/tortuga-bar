@@ -50,22 +50,30 @@ export function newPage() {
 
     function hero() {
       const hero = {
-            hero: null,
-            create: function () {const create = content.appendChild(document.createElement("div"));
+        hero: null,
+        create: function () {const create = content.appendChild(document.createElement("div"));
             create.setAttribute("class", "hero");
             this.hero = create;
-            return this.hero;
+
         },
         headline: function () {
             const container = this.hero.appendChild(document.createElement("div"));
             container.setAttribute("class", "headline-container position-relative top-0 ms-3 w-50 bg-black bg-opacity-50")
             const headline = container.appendChild(document.createElement("h1"));
-            headline.setAttribute("class","text-white pt-4");
+            headline.setAttribute("class","text-white pt-4 pb-2");
             headline.textContent = "The search for home ends here.";
         },
+        button: function(){
+            const button = this.hero.appendChild(document.createElement("button"));
+            button.setAttribute("class","btn btn-primary ms-3")
+            button.setAttribute("value","Reservations")
+            button.setAttribute("id", "reservations");
+            button.textContent = "Make a reservation now!"
+        }
       };
       hero.create();
       hero.headline();
+      hero.button();
     }
 
   function main() {
@@ -75,12 +83,12 @@ export function newPage() {
     const main = {
         tabs: function(){
             const menuTabs = mainSelector.appendChild(document.createElement("div"));
-            menuTabs.setAttribute("class", "menu-nav flex-column justify-content-around align-items-center h-100 bg-black bg-opacity-50");
+            menuTabs.setAttribute("class", "menu-nav d-flex flex-column justify-content-around align-items-center h-100 bg-black bg-opacity-50");
             const titles = ["Food", "Drinks", "Specials"]
 
             for (let title of titles){
                 let container = menuTabs.appendChild(document.createElement("div"));
-                container.setAttribute("class", `${title.toLowerCase()} menu-tab d-flex align-items-center`)
+                container.setAttribute("class", `${title.toLowerCase()} menu-tab d-flex align-items-center justify-content-center h-25 w-100`)
                 let item = container.appendChild(document.createElement("p"));
                 item.setAttribute("class", "text-white nav-link mb-0 fs-5")
                 item.textContent = title
@@ -89,12 +97,12 @@ export function newPage() {
         section: null,
         createSection: function(){
             const section = mainSelector.appendChild(document.createElement("section"))
-            section.setAttribute("class", "section d-flex justify-content-center w-100 h-100 bg-light")
+            section.setAttribute("class", "section d-flex justify-content-center w-100 h-100")
             this.section = section
         },
         article: function () {
             const article = this.section.appendChild(document.createElement("article"));
-            article.setAttribute("class", "article bg-dark w-75 h-100 overflow-y-scroll")
+            article.setAttribute("class", "article bg-dark w-100 h-100 overflow-y-scroll")
         },
     };
 
@@ -104,8 +112,17 @@ export function newPage() {
   }
 
   function footer() {
+    const footer = content.appendChild(document.createElement("footer"));
+    footer.setAttribute("class", "footer d-flex justify-content-around align-items-center bg-black bg-opacity-50 w-100")
+
     const info = {
-      text: function () {},
+        text: function () {
+            const container = footer.appendChild(document.createElement("div"))
+            container.setAttribute("class", "footer-container d-flex justify-content-around align-items-center w-100")
+            const text = container.appendChild(document.createElement("p"));
+            text.setAttribute("class", "footer-text text-white mb-0")
+            text.textContent = "Designed by Austin Johnson"
+      },    
       credit: function () {},
     };
     info.text();

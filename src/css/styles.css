@@ -5,13 +5,15 @@
 .content {
     display: grid;
     grid-template-rows: 1fr 6fr 14fr 1fr;
-    height: 95vh;
+    height: 100vh;
     width: 100%;
 }
 
 .header {
     height: 5vh;
 }
+
+.footer{height: 3vh;}
 
 .hero {
     height: 50vw;
@@ -20,10 +22,6 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-}
-
-.menu-nav{
-    height: 5vh;
 }
 
 main{
