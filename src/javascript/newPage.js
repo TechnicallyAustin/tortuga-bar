@@ -52,7 +52,7 @@ export function newPage() {
       const hero = {
         hero: null,
         create: function () {const create = content.appendChild(document.createElement("div"));
-            create.setAttribute("class", "hero");
+            create.setAttribute("class", "hero  border-5 border-bottom border-secondary");
             this.hero = create;
 
         },
@@ -78,7 +78,7 @@ export function newPage() {
 
   function main() {
     const mainSelector = content.appendChild(document.createElement("main"));
-    mainSelector.setAttribute("class", "main")
+    mainSelector.setAttribute("class", "main border-top border-3 border-warning")
 
     const main = {
         tabs: function(){
