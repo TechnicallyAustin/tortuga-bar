@@ -1,4 +1,4 @@
-import {createCards} from './card.js'
+import {Card, newFoodCards} from './card.js'
 
 class Food {
   constructor(title, info, price) {
@@ -42,18 +42,25 @@ const foodList = {
 };
 
 export function addFood() {
+    const all = []
     for (let key in foodList){
         let title = foodList[key][0];
         let info = foodList[key][1];
         let price = foodList[key][2];
         const meal = new Food(title,info,price)
-        console.log(meal)
+        all.push(meal)
     }
+    return all
 };
 
-function foodEvent() {
-  const food = document.querySelector(".food");
-  food.addEventListener("click", ()=> {display()});
-}
+export function foodEvent() {
+  const food = document.querySelector(".food-container");
+  console.log(food)
+  food.addEventListener("click", ()=> {
+    console.log("clicked")
+    newFoodCards()
+  });
+};
+
 
 console.log("Food imported")

@@ -5,13 +5,13 @@ export function newPage() {
     const header = content.appendChild(document.createElement("header"));
     header.setAttribute(
       "class",
-      "bg-black bg-opacity-50 w-100 d-flex justify-content-between align-items-center position-sticky top-0"
+      "bg-black bg-opacity-75 w-100 d-flex justify-content-between align-items-center position-sticky top-0"
     );
 
     const title = () => {
       const title = header.appendChild(document.createElement("p"));
       title.setAttribute("class", "w-25 ms-3 text-white mb-0 fs-3 ");
-      title.textContent = "TECH BAR IO";
+      title.textContent = "TBIO";
     };
 
     const navbar = {
@@ -58,10 +58,15 @@ export function newPage() {
         },
         headline: function () {
             const container = this.hero.appendChild(document.createElement("div"));
-            container.setAttribute("class", "headline-container position-relative top-0 ms-3 w-50 bg-black bg-opacity-50")
+            container.setAttribute("class", "headline-container display-1 position-relative top-0 mt-5 ms-3 w-50 bg-black bg-opacity-50")
             const headline = container.appendChild(document.createElement("h1"));
-            headline.setAttribute("class","text-white pt-4 pb-2");
-            headline.textContent = "The search for home ends here.";
+            headline.setAttribute("class","headline display-3 text-white");
+            headline.textContent = "TECH BAR IO"
+
+            const subText = container.appendChild(document.createElement("p"))
+            subText.setAttribute("class", "text-muted text-white pb-2 fs-5")
+            subText.textContent = "The search for home ends here.";
+        
         },
         button: function(){
             const button = this.hero.appendChild(document.createElement("button"));
@@ -88,9 +93,9 @@ export function newPage() {
 
             for (let title of titles){
                 let container = menuTabs.appendChild(document.createElement("div"));
-                container.setAttribute("class", `${title.toLowerCase()} menu-tab d-flex align-items-center justify-content-center h-25 w-100`)
+                container.setAttribute("class", `${title.toLowerCase()}-container menu-tab d-flex align-items-center justify-content-center h-25 w-100`)
                 let item = container.appendChild(document.createElement("p"));
-                item.setAttribute("class", "text-white nav-link mb-0 fs-5")
+                item.setAttribute("class", `${title.toLowerCase()} text-white nav-link mb-0 fs-5`)
                 item.textContent = title
             }
         },
@@ -102,7 +107,7 @@ export function newPage() {
         },
         article: function () {
             const article = this.section.appendChild(document.createElement("article"));
-            article.setAttribute("class", "article bg-dark w-100 h-100 overflow-y-scroll")
+            article.setAttribute("class", "article container row-cols-sm-3  row bg-dark w-100 mh-100 overflow-y-auto")
         },
     };
 

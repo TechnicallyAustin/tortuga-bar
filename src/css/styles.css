@@ -4,7 +4,7 @@
 
 .content {
     display: grid;
-    grid-template-rows: 1fr 6fr 14fr 1fr;
+    grid-template-rows: 1fr 35vw 14fr 1fr;
     height: 100vh;
     width: 100%;
 }
@@ -16,7 +16,7 @@
 .footer{height: 3vh;}
 
 .hero {
-    height: 50vw;
+    height: 35vw;
     width: 100%;
     background-image: url("../images/glass.jpeg");
     background-size: cover;
@@ -27,4 +27,14 @@
 main{
     display: grid;
     grid-template-columns: 3fr 18fr;
+}
+
+article{
+    height: 65vh;
+    overflow-y: auto;
+}
+
+.card{
+    width: 32%;
+    height: auto;
 }
