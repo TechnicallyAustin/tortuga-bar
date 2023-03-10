@@ -45,15 +45,11 @@ export function addDrinks() {
 
 export function nav(){
     const article = document.querySelector("article")
+    const newCard = article.appendChild(document.createElement("div"));
+    newCard.setAttribute("class", "card drink-card-menu");
     const cardNav = {
-        card: null,
-        create: function(){
-            const newCard = article.appendChild(document.createElement("div"));
-            newCard.setAttribute("class", "card")
-            this.card = newCard
-        },
         header: function(){
-            const header = card.appendChild(document.createElement("div"))
+            const header = newCard.appendChild(document.createElement("div"))
             header.setAttribute("class", "card-header");
             const elements = {
                 nav: null,
@@ -65,7 +61,7 @@ export function nav(){
                 },
                 items: function(){
                     for (let key in drinkList){
-                        let item = nav.appendChild(document.createElement("li"));
+                        let item = this.nav.appendChild(document.createElement("li"));
                         item.setAttribute("class","nav-item");
                         item.setAttribute("role", "presentation")
 
@@ -83,11 +79,35 @@ export function nav(){
 
         },
         body: function(){
-            // div card-body
-                // div tab-content
-                    // div tab-pane role="tabpanel"
+            const elements = {
+                body: null,
+                create: function(){
+                    const newBody = newCard.appendChild(document.createElement("div"))
+                    newBody.setAttribute("class", "card-body");
+                    this.body = newBody
+                },
+                content: function(){
+                    const content = this.body.appendChild(document.createElement("div"));
+                    content.setAttribute("class", "tab-content");
+
+                    const menus = {
+                        beer: function(){},
+                        wine: function(){},
+                        cocktails: function(){},
+                        martinis: function(){}
+                    };
+                    menus.beer()
+                    menus.wine()
+                    menus.cocktails()
+                    menus.martinis()
+                },
+            }
+            elements.create()
+            elements.content()
         } 
-    }
+    };
+    cardNav.header()
+    cardNav.body()
 }
 
 export function drinkEvent() {
@@ -99,7 +119,7 @@ export function drinkEvent() {
    //     container.classList.remove("border-4", "border-warning")
    // } else {
         event.target.classList.add("border-4", "border-warning")
-        newDrinkCards()
+        nav()
    // }
 console.log(event.target)
   });

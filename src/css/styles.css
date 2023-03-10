@@ -53,6 +53,10 @@ main{
 height: auto;
 }
 
+.drink-card-menu{
+    height: 61vh;
+    width: 85vw;
+}
 
 
 
