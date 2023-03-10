@@ -1,12 +1,14 @@
-* {
-    margin: 0;
-}
+
 
 .content {
     display: grid;
     grid-template-rows: 1fr 35vw 14fr 1fr;
     height: 100vh;
     width: 100%;
+    margin: 0;
+    top: 0;
+    left: 0;
+    position: relative;
 }
 
 .header {
@@ -44,10 +46,14 @@ main{
 
 .card{
     width: 38vw;
-    height: 14vh;
+    height: 15vh;
 }
 
-.menu-image{
-width: 4vw;
+.menu-nav{
 height: auto;
 }
+
+
+
+
+

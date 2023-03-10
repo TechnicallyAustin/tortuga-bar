@@ -1,11 +1,10 @@
 import { addFood } from "./food.js";
 
 export class Card{
-    constructor(title,info,price, image){
+    constructor(title,info,price){
         this.title = title
         this.info = info
         this. price = price
-        this.image = image
     }
 };
 
@@ -13,16 +12,16 @@ export class Card{
 function createCard(menuItem){
     const article = document.querySelector("article");
     const card = article.appendChild(document.createElement("div"));
-    card.setAttribute("class", "card col-3")
+    card.setAttribute("class", "card col-3 bg-dark text-white")
    const elements = {
        img: function(){
            const container = card.appendChild(document.createElement("div"));
            container.setAttribute("class", "card-header")
            container.textContent = menuItem.title
-           const image = container.appendChild(document.createElement("img"));
-           image.setAttribute("class","menu-image")
-           image.setAttribute("src",`${menuItem.image}`)
-           image.setAttribute("alt",`${menuItem.title} image`)
+           //const image = container.appendChild(document.createElement("img"));
+           //image.setAttribute("class","menu-image")
+           //image.setAttribute("src",`${menuItem.image}`)
+           //image.setAttribute("alt",`${menuItem.title} image`)
        },
        body: function(){
            const container = card.appendChild(document.createElement("div"));

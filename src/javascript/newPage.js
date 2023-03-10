@@ -89,13 +89,13 @@ export function newPage() {
         tabs: function(){
             const menuTabs = mainSelector.appendChild(document.createElement("div"));
             menuTabs.setAttribute("class", "menu-nav d-flex flex-column justify-content-around align-items-center h-100 bg-black bg-opacity-50");
-            const titles = ["Food", "Drinks", "Specials"]
+            const titles = ["Food", "Drinks", "Special"]
 
             for (let title of titles){
                 let container = menuTabs.appendChild(document.createElement("div"));
-                container.setAttribute("class", `${title.toLowerCase()}-container menu-tab d-flex align-items-center justify-content-center h-25 w-100`)
+                container.setAttribute("class", `${title.toLowerCase()}-container menu-tab d-flex align-items-center justify-content-center h-100 w-100`)
                 let item = container.appendChild(document.createElement("p"));
-                item.setAttribute("class", `${title.toLowerCase()} text-white nav-link mb-0 fs-5`)
+                item.setAttribute("class", `${title.toLowerCase()} text-white text-center d-flex align-items-center justify-content-center nav-link mb-0 fs-5 w-100 h-100`)
                 item.textContent = title
             }
         },
