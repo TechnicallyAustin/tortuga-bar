@@ -44,24 +44,43 @@ export function addDrinks() {
 };
 
 export function nav(){
+    const article = document.querySelector("article")
     const cardNav = {
-        card: function(){
-            // div card
+        card: null,
+        create: function(){
+            const newCard = article.appendChild(document.createElement("div"));
+            newCard.setAttribute("class", "card")
+            this.card = newCard
         },
         header: function(){
-            // div header
-        },
-        nav: function(){
-            // ul
-            // ul nav nav-tabs card-header-tabs role="tabList"
-                // li nav-item role="preseentation"
-                    // a nav-link active
-                // li nav-item role="preseentation"
-                    // a nav-link active
-                // li nav-item role="preseentation"
-                    // a nav-link active
-                // li nav-item role="preseentation"
-                    // a nav-link active
+            const header = card.appendChild(document.createElement("div"))
+            header.setAttribute("class", "card-header");
+            const elements = {
+                nav: null,
+                createNav: function(){
+                    const nav = header.appendChild(document.createElement("ul"));
+                    nav.setAttribute("class", "nav nav-tabs card-header-tabs");
+                    nav.setAttribute("role", "tablist")
+                    this.nav = nav;
+                },
+                items: function(){
+                    for (let key in drinkList){
+                        let item = nav.appendChild(document.createElement("li"));
+                        item.setAttribute("class","nav-item");
+                        item.setAttribute("role", "presentation")
+
+                        let link = item.appendChild(document.createElement("a"))
+                        link.setAttribute("class", "nav-link active");
+                        link.setAttribute("id", "")
+                        link.setAttribute("data-bs-toggle", "tab");
+                        link.setAttribute("href", "#")
+                        link.setAttribute("aria-controls", "")
+                    };
+                }
+            }; 
+            elements.createNav()
+            elements.items()
+
         },
         body: function(){
             // div card-body
