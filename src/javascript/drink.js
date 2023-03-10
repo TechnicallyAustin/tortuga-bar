@@ -9,22 +9,22 @@ class Drink{
 }
 
 const drinkList = {
-  beer: [
+  Beer: [
     "Beer Title",
     "A little bit of a longer description of the beer",
     "beer price",
   ],
-  wine: [
+  Wine: [
     "Wine Title",
     "A little bit of a longer description of the wine",
     "wine price",
   ],
-  cocktails: [
+  Cocktails: [
     "Cocktails Title",
     "A little bit of a longer description of the Cocktail",
     "Cocktail price",
   ],
-  martinis: [
+  Martinis: [
     "Martinis Title",
     "A little bit of a longer description of the Martini",
     "Martini price",
@@ -50,12 +50,12 @@ export function nav(){
     const cardNav = {
         header: function(){
             const header = newCard.appendChild(document.createElement("div"))
-            header.setAttribute("class", "card-header");
+            header.setAttribute("class", "card-header bg-light");
             const elements = {
                 nav: null,
                 createNav: function(){
                     const nav = header.appendChild(document.createElement("ul"));
-                    nav.setAttribute("class", "nav nav-tabs card-header-tabs");
+                    nav.setAttribute("class", "nav nav-tabs card-header-tabs w-100");
                     nav.setAttribute("role", "tablist")
                     this.nav = nav;
                 },
@@ -67,10 +67,11 @@ export function nav(){
 
                         let link = item.appendChild(document.createElement("a"))
                         link.setAttribute("class", "nav-link active");
-                        link.setAttribute("id", "")
+                        link.setAttribute("id", `${key}`)
                         link.setAttribute("data-bs-toggle", "tab");
                         link.setAttribute("href", "#")
                         link.setAttribute("aria-controls", "")
+                        link.textContent = key 
                     };
                 }
             }; 
