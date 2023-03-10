@@ -1,4 +1,5 @@
 import { addFood } from "./food.js";
+import { addDrinks } from "./drink.js";
 
 export class Card{
     constructor(title,info,price){
@@ -69,4 +70,12 @@ export function newFoodCards(){
         createCard(item)
     }
 
+}
+
+export function newDrinkCards() {
+  const drinks = addDrinks();
+  for (let drink of drinks) {
+    let item = new Card(drink.title, drink.info, drink.price);
+    createCard(item);
+  }
 }
