@@ -46,7 +46,7 @@ export function addDrinks() {
 export function nav(){
     const article = document.querySelector("article")
     const newCard = article.appendChild(document.createElement("div"));
-    newCard.setAttribute("class", "card drink-card-menu bg-dark");
+    newCard.setAttribute("class", "card drink-card-menu bg-dark w-100");
     const cardNav = {
         header: function(){
             const header = newCard.appendChild(document.createElement("div"))
@@ -137,10 +137,10 @@ function selectMenu(){
 
 
 
-    for (let drink of drinks){
-        console.log(drink)
-        drink.addEventListener("click", () =>{
+    for (let key in drinks){
+        drinks[key].addEventListener("click", () =>{
             console.log("clicked")
+
         })
     }
 

@@ -2,7 +2,7 @@
 
 .content {
     display: grid;
-    grid-template-rows: 1fr 35vw 14fr 1fr;
+    grid-template-rows: 1fr 30vw 14fr 1fr;
     height: 100vh;
     width: 100%;
     margin: 0;
@@ -18,7 +18,7 @@
 .footer{height: 3vh;}
 
 .hero {
-    height: 35vw;
+    height: 30vw;
     width: 100%;
     background-image: url("../images/glass.jpeg");
     background-size: cover;
@@ -28,15 +28,17 @@
 
 main{
     display: grid;
-    grid-template-columns: 3fr 18fr;
+    grid-template-rows: 2fr 28fr;
+    height: auto;
+    position: relative;
 }
 
 .article {
-    height:61vh;
+    height: 61vh;
+    width: 100vw;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    grid-auto-rows: 1fr;
     justify-items: center;
     align-items: center;
     gap:0;
@@ -44,17 +46,19 @@ main{
 }
 
 .card{
-    width: 38vw;
+    width: 100vw;
     height: 15vh;
+    grid-column: 1/3;
 }
 
 .menu-nav{
-height: auto;
+    width: 100vw;
+    height: 61vh
 }
 
 .drink-card-menu{
     height: 61vh;
-    width: 85vw;
+    width: 90vw;
 }
 
 

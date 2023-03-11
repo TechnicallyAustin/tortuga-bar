@@ -13,7 +13,7 @@ export class Card{
 function createCard(menuItem){
     const article = document.querySelector("article");
     const card = article.appendChild(document.createElement("div"));
-    card.setAttribute("class", "card col-3 bg-dark text-white")
+    card.setAttribute("class", "card col-3 bg-dark text-white border-warning")
    const elements = {
        img: function(){
            const container = card.appendChild(document.createElement("div"));

@@ -55,7 +55,7 @@ export function foodEvent() {
    // if (container.classList.contains("border-4")){
    //     container.classList.remove("border-4", "border-warning")
    // } else {
-        event.target.classList.add("border-4", "border-warning")
+        event.target.classList.add("border-warning")
         newFoodCards()
    // }
 console.log(event.target)
