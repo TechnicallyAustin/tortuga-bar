@@ -46,11 +46,11 @@ export function addDrinks() {
 export function nav(){
     const article = document.querySelector("article")
     const newCard = article.appendChild(document.createElement("div"));
-    newCard.setAttribute("class", "card drink-card-menu");
+    newCard.setAttribute("class", "card drink-card-menu bg-dark");
     const cardNav = {
         header: function(){
             const header = newCard.appendChild(document.createElement("div"))
-            header.setAttribute("class", "card-header bg-light");
+            header.setAttribute("class", "card-header bg-secondary");
             const elements = {
                 nav: null,
                 createNav: function(){
@@ -62,12 +62,12 @@ export function nav(){
                 items: function(){
                     for (let key in drinkList){
                         let item = this.nav.appendChild(document.createElement("li"));
-                        item.setAttribute("class","nav-item");
+                        item.setAttribute("class","nav-item w-25");
                         item.setAttribute("role", "presentation")
 
                         let link = item.appendChild(document.createElement("a"))
-                        link.setAttribute("class", "nav-link active");
-                        link.setAttribute("id", `${key}`)
+                        link.setAttribute("class", `${key.toLowerCase()} nav-link active bg-dark border-warning text-white`)
+                        link.setAttribute("id", `${key.toLowerCase()}`)
                         link.setAttribute("data-bs-toggle", "tab");
                         link.setAttribute("href", "#")
                         link.setAttribute("aria-controls", "")
@@ -121,7 +121,28 @@ export function drinkEvent() {
    // } else {
         event.target.classList.add("border-4", "border-warning")
         nav()
+        selectMenu()
    // }
 console.log(event.target)
   });
 };
+
+function selectMenu(){
+    const drinks = {
+        beer: document.querySelector(".beer"),
+        wine: document.querySelector(".wine"),
+        cocktails: document.querySelector(".cocktails"),
+        martinis: document.querySelector(".martinis")
+    }
+
+
+
+    for (let drink of drinks){
+        console.log(drink)
+        drink.addEventListener("click", () =>{
+            console.log("clicked")
+        })
+    }
+
+
+}

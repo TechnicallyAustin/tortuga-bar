@@ -33,7 +33,6 @@ main{
 
 .article {
     height:61vh;
-    overflow-y: auto;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr;

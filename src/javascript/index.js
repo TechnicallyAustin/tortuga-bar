@@ -7,7 +7,7 @@ import '../css/styles.css'
 import { newPage } from './newPage.js'
 import {addFood, foodEvent} from './food.js'
 import { newFoodCards } from "./card.js";
-import { drinkEvent } from "./drink";
+import { drinkEvent } from "./drink.js";
 //import './food.js'
 
 // creates Page Elements
