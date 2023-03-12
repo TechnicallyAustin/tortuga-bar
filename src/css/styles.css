@@ -2,8 +2,7 @@
 
 .content {
     display: grid;
-    grid-template-rows: 1fr 30vw 14fr 1fr;
-    height: 100vh;
+    grid-template-rows: 1fr 6fr 24fr 1fr;
     width: 100%;
     margin: 0;
     top: 0;
@@ -11,14 +10,8 @@
     position: relative;
 }
 
-.header {
-    height: 5vh;
-}
-
-.footer{height: 3vh;}
 
 .hero {
-    height: 30vw;
     width: 100%;
     background-image: url("../images/glass.jpeg");
     background-size: cover;
@@ -27,14 +20,14 @@
 }
 
 main{
+    height: 67vh;
     display: grid;
-    grid-template-rows: 2fr 28fr;
-    height: auto;
+    grid-template-rows: 1fr 40fr;
     position: relative;
 }
 
 .article {
-    height: 61vh;
+    height: auto;
     width: 100vw;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
@@ -53,11 +46,11 @@ main{
 
 .menu-nav{
     width: 100vw;
-    height: 61vh
+    height: 4vh;
 }
 
 .drink-card-menu{
-    height: 61vh;
+    height: 100%;
     width: 90vw;
 }
 

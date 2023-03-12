@@ -46,7 +46,7 @@ export function addDrinks() {
 export function nav(){
     const article = document.querySelector("article")
     const newCard = article.appendChild(document.createElement("div"));
-    newCard.setAttribute("class", "card drink-card-menu bg-dark w-100");
+    newCard.setAttribute("class", "card drink-card-menu bg-dark");
     const cardNav = {
         header: function(){
             const header = newCard.appendChild(document.createElement("div"))
@@ -114,12 +114,12 @@ export function nav(){
 export function drinkEvent() {
   const container = document.querySelector(".drinks-container");
   const article = document.querySelector("article");
-  console.log(container)
   container.addEventListener("click", (event)=> {
    // if (container.classList.contains("border-4")){
    //     container.classList.remove("border-4", "border-warning")
    // } else {
-        event.target.classList.add("border-4", "border-warning")
+        //event.target.classList.add("border-4", "border-warning")
+        article.innerHTML = ""
         nav()
         selectMenu()
    // }
@@ -140,7 +140,6 @@ function selectMenu(){
     for (let key in drinks){
         drinks[key].addEventListener("click", () =>{
             console.log("clicked")
-
         })
     }
 

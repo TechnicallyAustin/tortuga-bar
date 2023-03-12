@@ -83,12 +83,12 @@ export function newPage() {
 
   function main() {
     const mainSelector = content.appendChild(document.createElement("main"));
-    mainSelector.setAttribute("class", "main border-top border-3 border-warning position-relative")
+    mainSelector.setAttribute("class", "main border-top border-3 border-warning position-relative h-100")
 
     const main = {
         tabs: function(){
             const menuTabs = mainSelector.appendChild(document.createElement("div"));
-            menuTabs.setAttribute("class", "menu-nav d-flex justify-content-around align-items-center h-100 bg-black bg-opacity-50");
+            menuTabs.setAttribute("class", "menu-nav d-flex justify-content-around align-items-center h-100 w-100 bg-black bg-opacity-50");
             const titles = ["Food", "Drinks", "Special"]
 
             for (let title of titles){
@@ -107,7 +107,7 @@ export function newPage() {
         },
         article: function () {
             const article = this.section.appendChild(document.createElement("article"));
-            article.setAttribute("class", "article row bg-dark w-100 mh-100 overflow-y-auto")
+            article.setAttribute("class", "article row bg-dark w-100 mh-100")
         },
     };
 
