@@ -107,7 +107,7 @@ export function newPage() {
         },
         article: function () {
             const article = this.section.appendChild(document.createElement("article"));
-            article.setAttribute("class", "article row bg-dark w-100 mh-100")
+            article.setAttribute("class", "article row bg-dark w-100 h-100")
         },
     };
 
