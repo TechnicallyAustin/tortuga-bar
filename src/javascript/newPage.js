@@ -58,7 +58,7 @@ export function newPage() {
         },
         headline: function () {
             const container = this.hero.appendChild(document.createElement("div"));
-            container.setAttribute("class", "headline-container display-1 position-relative top-0 mt-5 ms-3 w-50 bg-black bg-opacity-50")
+            container.setAttribute("class", "headline-container display-1 position-relative top-0 mt-4 ms-3 w-50 bg-black bg-opacity-50")
             const headline = container.appendChild(document.createElement("h1"));
             headline.setAttribute("class","headline display-3 text-white");
             headline.textContent = "TECH BAR IO"
@@ -70,7 +70,7 @@ export function newPage() {
         },
         button: function(){
             const button = this.hero.appendChild(document.createElement("button"));
-            button.setAttribute("class","btn btn-primary ms-3")
+            button.setAttribute("class","btn btn-primary ms-3 ")
             button.setAttribute("value","Reservations")
             button.setAttribute("id", "reservations");
             button.textContent = "Make a reservation now!"
@@ -107,7 +107,7 @@ export function newPage() {
         },
         article: function () {
             const article = this.section.appendChild(document.createElement("article"));
-            article.setAttribute("class", "article row bg-dark w-100 h-100")
+            article.setAttribute("class", "article row bg-dark w-100 h-1000")
         },
     };
 
@@ -118,12 +118,12 @@ export function newPage() {
 
   function footer() {
     const footer = content.appendChild(document.createElement("footer"));
-    footer.setAttribute("class", "footer d-flex justify-content-around align-items-center bg-black bg-opacity-50 w-100")
+    footer.setAttribute("class", "footer d-flex justify-content-around align-items-center bg-black bg-opacity-50 w-100 h-100")
 
     const info = {
         text: function () {
             const container = footer.appendChild(document.createElement("div"))
-            container.setAttribute("class", "footer-container d-flex justify-content-around align-items-center w-100")
+            container.setAttribute("class", "footer-container d-flex justify-content-around align-items-center h-100 w-100")
             const text = container.appendChild(document.createElement("p"));
             text.setAttribute("class", "footer-text text-white mb-0")
             text.textContent = "Designed by Austin Johnson"
