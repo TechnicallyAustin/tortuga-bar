@@ -13,7 +13,7 @@ export class Card{
 function createCard(menuItem){
     const article = document.querySelector("article");
     const card = article.appendChild(document.createElement("div"));
-    card.setAttribute("class", "card col-3 bg-dark text-white border-warning")
+    card.setAttribute("class", "card h-50 w-75 bg-light border-warning border-4")
    const elements = {
        img: function(){
            const container = card.appendChild(document.createElement("div"));
@@ -26,12 +26,12 @@ function createCard(menuItem){
        },
        body: function(){
            const container = card.appendChild(document.createElement("div"));
-           container.setAttribute("class", "card-body h-25");
+           container.setAttribute("class", "card-body h-50");
            container.textContent = menuItem.info
        },
        footer: function(){
            const container = card.appendChild(document.createElement("div"));
-           container.setAttribute("class", "card-footer");
+           container.setAttribute("class", "card-footer h-25");
            container.textContent = menuItem.price
        }
    }

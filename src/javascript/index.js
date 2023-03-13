@@ -7,7 +7,7 @@ import '../css/styles.css'
 import { newPage } from './newPage.js'
 import {addFood, foodEvent} from './food.js'
 import { newFoodCards } from "./card.js";
-import { drinkEvent } from "./drink.js";
+import { selectDrinkType } from "./drink.js";
 //import './food.js'
 
 // creates Page Elements
@@ -22,7 +22,8 @@ function food(){
 }
 
 function drinks(){
-  drinkEvent()
+  selectDrinkType()
+  
   // adds an event listenr to the  tab to dynmically create a menu
 }
 

@@ -43,7 +43,7 @@ export function addDrinks() {
     return all
 };
 
-export function nav(){
+function nav(){
     const article = document.querySelector("article")
     const newCard = article.appendChild(document.createElement("div"));
     newCard.setAttribute("class", "card drink-card-menu bg-dark");
@@ -111,7 +111,7 @@ export function nav(){
     cardNav.body()
 }
 
-export function drinkEvent() {
+export function selectDrinkType() {
   const container = document.querySelector(".drinks-container");
   const article = document.querySelector("article");
   container.addEventListener("click", (event)=> {
@@ -121,27 +121,37 @@ export function drinkEvent() {
         //event.target.classList.add("border-4", "border-warning")
         article.innerHTML = ""
         nav()
-        selectMenu()
+        displayDrinkMenu()
    // }
 console.log(event.target)
   });
 };
 
-function selectMenu(){
-    const drinks = {
-        beer: document.querySelector(".beer"),
-        wine: document.querySelector(".wine"),
-        cocktails: document.querySelector(".cocktails"),
-        martinis: document.querySelector(".martinis")
-    }
+function displayDrinkMenu(){
 
+const drinkTypes = {
+  beer: {
+    selector: document.querySelector(".beer")
+    },
+  wine: {
+    selector: document.querySelector(".wine")
+    },
+  cocktails: {
+    selector: document.querySelector(".cocktails")
+    },
+  martinis: {
+    selector: document.querySelector(".martinis")
+    },
+};
 
-
-    for (let key in drinks){
-        drinks[key].addEventListener("click", () =>{
-            console.log("clicked")
-        })
-    }
-
+for (let drink in drinkTypes){
+    const menu = drinkTypes[drink].selector
+    console.log(menu)
+    menu.addEventListener("click", () => {
+        console.log(`${menu} clicked`)
+        newDrinkCards()
+    })
+}
 
 }
+

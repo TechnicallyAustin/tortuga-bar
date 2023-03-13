@@ -12,12 +12,12 @@ class Food {
 const foodList = {
   ramen: [
     "Ramen",
-    "Tonkatsu Ramen with a boiled egg and chasu, served with traditional toppings.",
+    "Tonkatsu Ramen with a boiled egg and chasu",
     "18"
     ],
   pizza: [
     "Pizza",
-    "Your choice of our speciality pizza's. Supreme, Combination or Meat-Lovers.",
+    "Your choice of Supreme, Combination or Meat-Lovers.",
     "22"
   ],
   burger: [
