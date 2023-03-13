@@ -1,6 +1,6 @@
 export function newPage() {
   const content = document.querySelector(".content");
-
+  
   function header() {
     const header = content.appendChild(document.createElement("header"));
     header.setAttribute(
@@ -48,7 +48,7 @@ export function newPage() {
     navbar.links();
   }
 
-    function hero() {
+  function hero() {
       const hero = {
         hero: null,
         create: function () {const create = content.appendChild(document.createElement("div"));
@@ -65,7 +65,7 @@ export function newPage() {
           headline.textContent = "TECH BAR IO"
 
           const subText = container.appendChild(document.createElement("p"))
-          subText.setAttribute("class", "text-muted text-white pb-1 fs-5")
+          subText.setAttribute("class", "text-muted text-green pb-1 fs-5")
           subText.textContent = "The search for home ends here.";
 
           const button = container.appendChild(document.createElement("button"));
@@ -79,7 +79,7 @@ export function newPage() {
       hero.create();
       hero.headline();
 
-    }
+  }
 
   function main() {
     const mainSelector = content.appendChild(document.createElement("main"));
