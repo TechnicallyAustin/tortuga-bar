@@ -57,33 +57,33 @@ export function newPage() {
 
         },
         headline: function () {
-            const container = this.hero.appendChild(document.createElement("div"));
-            container.setAttribute("class", "headline-container display-1 position-relative top-0 mt-4 ms-3 w-50 bg-black bg-opacity-50")
-            const headline = container.appendChild(document.createElement("h1"));
-            headline.setAttribute("class","headline display-3 text-white");
-            headline.textContent = "TECH BAR IO"
+          const container = this.hero.appendChild(document.createElement("div"));
+          container.setAttribute("class", "headline-container display-1 position-relative top-0 mt-4 ms-3 pb-2  h-50 w-75 bg-black bg-opacity-50");
 
-            const subText = container.appendChild(document.createElement("p"))
-            subText.setAttribute("class", "text-muted text-white pb-2 fs-5")
-            subText.textContent = "The search for home ends here.";
-        
-        },
-        button: function(){
-            const button = this.hero.appendChild(document.createElement("button"));
-            button.setAttribute("class","btn btn-primary ms-3 ")
-            button.setAttribute("value","Reservations")
-            button.setAttribute("id", "reservations");
-            button.textContent = "Make a reservation now!"
-        }
+          const headline = container.appendChild(document.createElement("h1"));
+          headline.setAttribute("class","headline display-3 text-white");
+          headline.textContent = "TECH BAR IO"
+
+          const subText = container.appendChild(document.createElement("p"))
+          subText.setAttribute("class", "text-muted text-white pb-1 fs-5")
+          subText.textContent = "The search for home ends here.";
+
+          const button = container.appendChild(document.createElement("button"));
+          button.setAttribute("class","btn btn-primary")
+          button.setAttribute("value","Reservations")
+          button.setAttribute("id", "reservations");
+          button.textContent = "Make a reservation now!"
+          },
+      
       };
       hero.create();
       hero.headline();
-      hero.button();
+
     }
 
   function main() {
     const mainSelector = content.appendChild(document.createElement("main"));
-    mainSelector.setAttribute("class", "main border-top border-3 border-warning position-relative h-100")
+    mainSelector.setAttribute("class", "main border-top border-3 border-warning position-relative")
 
     const main = {
         tabs: function(){
@@ -107,7 +107,7 @@ export function newPage() {
         },
         article: function () {
             const article = this.section.appendChild(document.createElement("article"));
-            article.setAttribute("class", "article row bg-dark w-100 h-1000")
+            article.setAttribute("class", "article row bg-dark w-100 h-100")
         },
     };
 

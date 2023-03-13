@@ -23,7 +23,6 @@ function food(){
 
 function drinks(){
   selectDrinkType()
-  
   // adds an event listenr to the  tab to dynmically create a menu
 }
 

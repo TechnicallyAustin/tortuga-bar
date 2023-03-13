@@ -1,11 +1,10 @@
-body {
-    height: 100vh;
-}
+
 
 .content {
     height: 100vh;
+    max-height: 100vh;
     display: grid;
-    grid-template-rows: 1f 2fr 3fr 1fr;
+    grid-template-rows: 1fr 4fr 8fr 1fr;
     width: 100%;
     margin: 0;
     top: 0;
@@ -15,7 +14,8 @@ body {
 
 
 .hero {
-    height: 25vh;
+    height: auto;
+    max-height: 35vh;
     width: 100%;
     background-image: url("../images/glass.jpeg");
     background-size: cover;
@@ -24,9 +24,9 @@ body {
 }
 
 main {
-    height: 50vh;
+    max-height: 65vh;
     display: grid;
-    grid-template-rows: 1fr 30fr;
+    grid-template-rows: 1fr 35fr;
 }
 
 section{
@@ -34,10 +34,10 @@ section{
 }
 
 .article {
-    max-height: 100%;
+    height: auto;
     width: 100vw;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     align-items: center;
@@ -54,4 +54,8 @@ section{
 .drink-card-menu {
     height: 100%;
     width: 100vw;
+}
+
+.footer{
+    height: auto;
 }
