@@ -89,12 +89,12 @@ function nav() {
         body: null,
         create: function () {
           const newBody = newCard.appendChild(document.createElement("div"));
-          newBody.setAttribute("class", "card-body");
+          newBody.setAttribute("class", "menu-body card-body");
           this.body = newBody;
         },
         content: function () {
           const content = this.body.appendChild(document.createElement("div"));
-          content.setAttribute("class", "tab-content");
+          content.setAttribute("class", "tab-content menu-content");
 
           const menus = {
             beer: function () {},

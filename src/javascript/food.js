@@ -1,5 +1,7 @@
 import {Card, newFoodCards} from './card.js'
 import Ramen from '../images/Ramen.jpeg'
+import { nav } from './subnav.js';
+
 console.log(Ramen)
 class Food {
   constructor(title, info, price) {
@@ -34,6 +36,14 @@ const foodList = {
   ],
 };
 
+const foodTitles = {
+  apetizers: "Apetizers" ,
+  entrees: "Entrees" ,
+  salads: "Salads",
+  pasta: "Pasta",
+  deserts: "Deserts",
+};
+
 export function addFood() {
     const all = []
     for (let key in foodList){
@@ -56,7 +66,9 @@ export function foodEvent() {
    //     container.classList.remove("border-4", "border-warning")
    // } else {
     article.innerHTML = ""
+
         event.target.classList.add("border-warning")
+        nav(foodTitles)
         newFoodCards()
    // }
 console.log(event.target)

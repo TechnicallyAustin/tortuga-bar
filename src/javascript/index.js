@@ -5,8 +5,7 @@ import 'jquery';
 import 'popper.js'
 import '../css/styles.css'
 import { newPage } from './newPage.js'
-import {addFood, foodEvent} from './food.js'
-import { newFoodCards } from "./card.js";
+import { foodEvent} from './food.js'
 import { selectDrinkType } from "./drink.js";
 //import './food.js'
 

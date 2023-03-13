@@ -11,8 +11,8 @@ export class Card{
 
 // creates a single card
 function createCard(menuItem){
-    const article = document.querySelector("article");
-    const card = article.appendChild(document.createElement("div"));
+    const menuContent = document.querySelector(".menu-content");
+    const card = menuContent.appendChild(document.createElement("div"));
     card.setAttribute("class", `${menuItem.title} card h-75 w-75 bg-light border-warning border-4`)
    const elements = {
        img: function(){
@@ -38,28 +38,6 @@ function createCard(menuItem){
    elements.img()
    elements.body()
    elements.footer()
-
-    //const makeCard = {
-    //    card: null,
-    //    create: function(){
-    //        const card = article.appendChild(document.createElement("div"));
-    //        card.setAttribute("class", "card col")
-//
-    //        const div = card.appendChild(document.createElement("div"));
-    //        div.setAttribute("class", "row g-0");
-    //    }, // creates the card div and card sub div
-    //    image: function(){
-    //        const div = article.appendChild(document.createElement("div"));
-    //        card.setAttribute("class", "card col")
-//
-    //        const div = card.appendChild(document.createElement("div"));
-    //        div.setAttribute("class", "row g-0");
-    //    }, // creates img div and img
-    //    body: function(){}, // creates div and card-body div
-    //    elements: function(){}, // creates card-title h5 and card-text p
-    //}
-
-
 };
 
 // creates Card objects from Food Objects
